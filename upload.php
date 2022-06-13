@@ -19,18 +19,15 @@ $queryNovoProduto = "INSERT INTO tabela_imagens (
     nomeProduto,
     categoria,
     descricao,
-    VALOR ,
+    valor ,
     nome_imagem,
-    tamanho_imagem, 
-    tipo_imagem, imagem) 
+    imagem) 
     VALUES (
         '$nomeProduto',
         '$categoria',
         '$descricaoProduto',
         '$VALOR',
-        '$nome',
-        '$tamanho', 
-        '$tipo',
+        '$imagem',
         '$conteudo')";
 
 mysqli_query($conexao,$queryNovoProduto) 

@@ -5,7 +5,7 @@ require_once("conecta.php");
 
     $ID = $_GET['id'];
 
-    $querySelecao = "SELECT * FROM tabela_imagens WHERE ID = $ID";
+    $querySelecao = "SELECT * FROM tabela_imagens WHERE id = $ID";
     $resultado = mysqli_query($conexao,$querySelecao);
 
     $produtos = [];
@@ -13,10 +13,10 @@ require_once("conecta.php");
     while ($aquivos = mysqli_fetch_array($resultado)) {
         
      $produtos[] = [
-         "ID" => $aquivos['ID'],
+         "ID" => $aquivos['id'],
          "NOME" => $aquivos['nomeProduto'],
          "DESCRICAO" => $aquivos['descricao'],
-         "VALOR" => $aquivos['VALOR']
+         "VALOR" => $aquivos['valor']
      ];
     }
 

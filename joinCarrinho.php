@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin: *');
 require_once("conecta.php");
 
-$querySelecao = "SELECT * FROM tabela_carrinho C INNER JOIN tabela_imagens I ON C.id_produto = I.ID";
+$querySelecao = "SELECT * FROM tabela_carrinho C INNER JOIN tabela_imagens I ON C.id_produto = I.id";
 $resultado = mysqli_query($conexao,$querySelecao); 
 
 $produtos = [];
@@ -11,10 +11,10 @@ $produtos = [];
 while ($produto = mysqli_fetch_array($resultado)) {
     
  $produtos[] = [
-     "ID" => $produto['ID'],
+     "ID" => $produto['id'],
      "NOME" => $produto['nomeProduto'],
      "QUANTIDADE" => $produto['quantidade'],
-     "VALOR" => $produto['VALOR']
+     "VALOR" => $produto['valor']
  ];
 }
 

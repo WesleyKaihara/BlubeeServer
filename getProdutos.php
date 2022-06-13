@@ -11,11 +11,11 @@ require_once("conecta.php");
     while ($arquivos = mysqli_fetch_array($resultado)) {
         
      $produtos[] = [
-         "ID" => $arquivos['ID'],
+         "ID" => $arquivos['id'],
          "CATEGORIA" => $arquivos['categoria'],
          "NOME" => $arquivos['nomeProduto'],
          "DESCRICAO" => $arquivos['descricao'],
-         "VALOR" => $arquivos['VALOR']
+         "VALOR" => $arquivos['valor']
      ];
     }
 
